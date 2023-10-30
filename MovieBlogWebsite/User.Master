@@ -38,13 +38,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!---->
 
 </head>
+
+
 <body>
     <!---header---->
     <div class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.jpg" title="" /></a>
+                    <img src="web/images/logo.jpg" title="" /></a>
             </div>
             <!---start-top-nav---->
             <div class="top-menu">
@@ -73,14 +75,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     <!--/header-->
+
+
     <div class="content">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
         </asp:ContentPlaceHolder>
     </div>
-    <!---->
+
+
     <div class="footer">
         <div class="container">
-            <p>Copyrights © 2015 Blog All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p>Copyrights © 2023 | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
         </div>
     </div>
