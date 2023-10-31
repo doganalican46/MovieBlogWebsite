@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MovieBlogWebsite.Default2" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="CategoryDetails.aspx.cs" Inherits="MovieBlogWebsite.CategoryDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container">
+<div class="container">
         <div class="content-grids">
 
 
@@ -30,25 +29,29 @@
                     <ul>
                         <asp:Repeater ID="Repeater3" runat="server">
                             <ItemTemplate>
-                                <li><a href="BlogDetails.Aspx?BLOGID=<%# Eval("BLOGID")  %>"><%# Eval("BLOGTITTLE")  %> </a></li>
+                                <li><a href="#"><%# Eval("BLOGTITTLE")  %> </a></li>
                             </ItemTemplate>
                         </asp:Repeater>
                     </ul>
                 </div>
                 <div class="comments">
                     <h3>RECENT COMMENTS</h3>
-
-                    <asp:Repeater ID="Repeater4" runat="server">
-                        <ItemTemplate>
-                            <ul>
-                                <li><a href="#"> <%# Eval("USERNAME")  %>: <%# Eval("COMMENT")  %></a>
-                            </ul>
-                        </ItemTemplate>
-                    </asp:Repeater>
-
+                    <ul>
+                        <li><a href="#">Amada Doe </a>on <a href="#">Hello World!</a></li>
+                        <li><a href="#">Peter Doe </a>on <a href="#">Photography</a></li>
+                        <li><a href="#">Steve Roberts  </a>on <a href="#">HTML5/CSS3</a></li>
+                    </ul>
                 </div>
                 <div class="clearfix"></div>
-                
+                <div class="archives">
+                    <h3>ARCHIVES</h3>
+                    <ul>
+                        <li><a href="#">October 2013</a></li>
+                        <li><a href="#">September 2013</a></li>
+                        <li><a href="#">August 2013</a></li>
+                        <li><a href="#">July 2013</a></li>
+                    </ul>
+                </div>
                 <div class="categories">
                     <h3>CATEGORIES</h3>
                     <ul>

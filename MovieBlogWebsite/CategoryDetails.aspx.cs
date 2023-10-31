@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 using MovieBlogWebsite.Entity;
 namespace MovieBlogWebsite
 {
-    public partial class Default2 : System.Web.UI.Page
+    public partial class CategoryDetails : System.Web.UI.Page
     {
         BlogMovieEntities db = new BlogMovieEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-            var blogs = db.TBLBLOG.ToList();
+            int id = Convert.ToInt32(Request.QueryString["CATEGORYID"]);
+            var blogs = db.TBLBLOG.Where(x => x.BLOGCATEGORY == id).ToList();
             Repeater1.DataSource = blogs;
             Repeater1.DataBind();
 
@@ -20,14 +21,9 @@ namespace MovieBlogWebsite
             Repeater2.DataSource = category;
             Repeater2.DataBind();
 
-            var blogs2 = db.TBLBLOG.Take(5).ToList();
+            var blogs2 = db.TBLBLOG.ToList();
             Repeater3.DataSource = blogs2;
             Repeater3.DataBind();
-
-
-            var blogs3 = db.TBLCOMMENT.Take(3).ToList();
-            Repeater4.DataSource = blogs3;
-            Repeater4.DataBind();
         }
     }
 }

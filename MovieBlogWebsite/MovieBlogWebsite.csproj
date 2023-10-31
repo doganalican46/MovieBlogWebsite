@@ -85,6 +85,7 @@
     <Content Include="AdminPages\UpdateBlog.aspx" />
     <Content Include="AdminPages\UpdateComment.aspx" />
     <Content Include="BlogDetails.aspx" />
+    <Content Include="CategoryDetails.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Entity\Model1.Context.tt">
@@ -197,6 +198,13 @@
     </Compile>
     <Compile Include="BlogDetails.aspx.designer.cs">
       <DependentUpon>BlogDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryDetails.aspx.cs">
+      <DependentUpon>CategoryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryDetails.aspx.designer.cs">
+      <DependentUpon>CategoryDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
