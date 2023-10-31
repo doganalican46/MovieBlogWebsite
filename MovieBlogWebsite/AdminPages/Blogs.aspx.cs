@@ -12,6 +12,15 @@ namespace MovieBlogWebsite.AdminPages
         BlogMovieEntities dt = new BlogMovieEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["USERNAME"] == null)
+            {
+                Response.Redirect("~/LoginPage.Aspx");
+            }
+            else
+            {
+                Response.Write("Welcome: "+ Session["USERNAME"].ToString());
+
+            }
             Repeater1.DataSource = dt.TBLBLOG.ToList();
             Repeater1.DataBind();
         }

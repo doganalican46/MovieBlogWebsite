@@ -4,7 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BlogMovieModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BlogMovieModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BlogMovie.dbo.Admins' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="TBLABOUT">
           <Key>
             <PropertyRef Name="ABOUTID" />
@@ -102,6 +112,13 @@
           <EntitySet Name="TBLCOMMENT" EntityType="Self.TBLCOMMENT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLCONTACT" EntityType="Self.TBLCONTACT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLTYPE" EntityType="Self.TBLTYPE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admins" EntityType="Self.Admins" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Admins].[ID] AS [ID], 
+    [Admins].[USERNAME] AS [USERNAME], 
+    [Admins].[PASSWORD] AS [PASSWORD]
+    FROM [dbo].[Admins] AS [Admins]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_TBLBLOG_TBLCATEGORY" Association="Self.FK_TBLBLOG_TBLCATEGORY">
             <End Role="TBLCATEGORY" EntitySet="TBLCATEGORY" />
             <End Role="TBLBLOG" EntitySet="TBLBLOG" />
@@ -115,8 +132,7 @@
             <End Role="TBLCOMMENT" EntitySet="TBLCOMMENT" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BlogMovieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -235,7 +251,16 @@
             <End Role="TBLBLOG" EntitySet="TBLBLOG" />
             <End Role="TBLCOMMENT" EntitySet="TBLCOMMENT" />
           </AssociationSet>
+          <EntitySet Name="Admins" EntityType="BlogMovieModel.Admins" />
         </EntityContainer>
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -299,6 +324,15 @@
               <MappingFragment StoreEntitySet="TBLTYPE">
                 <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
                 <ScalarProperty Name="TYPENAME" ColumnName="TYPENAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="BlogMovieModel.Admins">
+              <MappingFragment StoreEntitySet="Admins">
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

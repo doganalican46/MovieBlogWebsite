@@ -31,5 +31,6 @@ namespace MovieBlogWebsite.Entity
         public virtual DbSet<TBLCOMMENT> TBLCOMMENT { get; set; }
         public virtual DbSet<TBLCONTACT> TBLCONTACT { get; set; }
         public virtual DbSet<TBLTYPE> TBLTYPE { get; set; }
+        public virtual DbSet<Admins> Admins { get; set; }
     }
 }

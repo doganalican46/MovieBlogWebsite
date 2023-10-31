@@ -14,6 +14,7 @@
         <AssociationConnector Association="BlogMovieModel.FK_TBLBLOG_TBLCATEGORY" ManuallyRouted="false" />
         <AssociationConnector Association="BlogMovieModel.FK_TBLBLOG_TBLTYPE" ManuallyRouted="false" />
         <AssociationConnector Association="BlogMovieModel.FK_TBLCOMMENT_TBLBLOG" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BlogMovieModel.Admins" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
