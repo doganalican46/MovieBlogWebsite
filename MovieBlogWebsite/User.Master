@@ -45,7 +45,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html">
+                <a href="Default.Aspx">
                     <img src="web/images/logo.jpg" title="" /></a>
             </div>
             <!---start-top-nav---->
@@ -58,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <span class="menu"></span>
                 <ul>
-                    <li class="active"><a href="Default.Aspx">HOME</a></li>
+                    <li><a href="Default.Aspx">HOME</a></li>
                     <li><a href="About.Aspx">ABOUT</a></li>
                     <li><a href="Contact.Aspx">CONTACT</a></li>
                 </ul>

@@ -19,9 +19,10 @@
                 <a class="navbar-brand" href="#">Movie&Series Blog</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/AdminPages/Blogs.Aspx">Blogs</a></li>
+                <li><a href="/AdminPages/Blogs.Aspx">Blogs</a></li>
                 <li><a href="/AdminPages/Comments.Aspx">Comments</a></li>
                 <li><a href="/AdminPages/Messages.Aspx">Messages</a></li>
+                <li><a href="/AdminPages/Statistics.Aspx">Statistics</a></li>
                 <li><a href="/AdminPages/About.Aspx">About</a></li>
             </ul>
         </div>

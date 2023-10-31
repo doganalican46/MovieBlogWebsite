@@ -77,9 +77,13 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminPages\Blogs.aspx" />
+    <Content Include="AdminPages\Comments.aspx" />
     <Content Include="AdminPages\DeleteBlog.aspx" />
+    <Content Include="AdminPages\DeleteComment.aspx" />
     <Content Include="AdminPages\NewBlog.aspx" />
+    <Content Include="AdminPages\Statistics.aspx" />
     <Content Include="AdminPages\UpdateBlog.aspx" />
+    <Content Include="AdminPages\UpdateComment.aspx" />
     <Content Include="BlogDetails.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
@@ -138,12 +142,26 @@
     <Compile Include="AdminPages\Blogs.aspx.designer.cs">
       <DependentUpon>Blogs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPages\Comments.aspx.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Comments.aspx.designer.cs">
+      <DependentUpon>Comments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\DeleteBlog.aspx.cs">
       <DependentUpon>DeleteBlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPages\DeleteBlog.aspx.designer.cs">
       <DependentUpon>DeleteBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\DeleteComment.aspx.cs">
+      <DependentUpon>DeleteComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\DeleteComment.aspx.designer.cs">
+      <DependentUpon>DeleteComment.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\NewBlog.aspx.cs">
       <DependentUpon>NewBlog.aspx</DependentUpon>
@@ -152,12 +170,26 @@
     <Compile Include="AdminPages\NewBlog.aspx.designer.cs">
       <DependentUpon>NewBlog.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPages\Statistics.aspx.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Statistics.aspx.designer.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\UpdateBlog.aspx.cs">
       <DependentUpon>UpdateBlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPages\UpdateBlog.aspx.designer.cs">
       <DependentUpon>UpdateBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\UpdateComment.aspx.cs">
+      <DependentUpon>UpdateComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\UpdateComment.aspx.designer.cs">
+      <DependentUpon>UpdateComment.aspx</DependentUpon>
     </Compile>
     <Compile Include="BlogDetails.aspx.cs">
       <DependentUpon>BlogDetails.aspx</DependentUpon>
