@@ -50,7 +50,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="container">
                 <div class="col-md-8 single-main">
 
-
                     <div class="single-grid">
                         <asp:Repeater ID="Repeater1" runat="server">
                             <ItemTemplate>
@@ -67,7 +66,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <li>
                                     <img src="web/images/avatar.png" class="img-responsive" alt="">
                                     <div class="desc">
-                                        <p style="font-weight:bold;">  <%# Eval("USERNAME") %>: </p> <p> <%# Eval("COMMENT") %> </p>
+                                        <p style="font-weight: bold;"><%# Eval("USERNAME") %>: </p>
+                                        <p><%# Eval("COMMENT") %> </p>
                                     </div>
                                 </li>
                             </ul>
@@ -80,13 +80,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                     <div class="content-form">
                         <h3>Leave a comment</h3>
-                        <form>
-                            <input type="text" placeholder="Name" required />
-                            <input type="text" placeholder="Email" required />
-                            <input type="text" placeholder="Phone" required />
-                            <textarea placeholder="Message"></textarea>
-                            <input type="submit" value="SEND" />
-                        </form>
+                        <form runat="server">
+                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Username" required=""></asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" placeholder="Mail" required=""></asp:TextBox>
+                            <asp:TextBox ID="TextBox3" runat="server" placeholder="Comment" TextMode="MultiLine" Height="100" required=""></asp:TextBox>
+                            <asp:Button ID="Button1" runat="server" Text="Comment" OnClick="Button1_Click" />
+                         
+                      </form>
                     </div>
 
 

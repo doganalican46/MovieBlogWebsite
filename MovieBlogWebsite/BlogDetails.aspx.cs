@@ -22,5 +22,18 @@ namespace MovieBlogWebsite
             Repeater2.DataSource = comments;
             Repeater2.DataBind();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(Request.QueryString["BLOGID"]);
+            TBLCOMMENT comment = new TBLCOMMENT();
+            comment.USERNAME = TextBox1.Text;
+            comment.MAIL = TextBox2.Text;
+            comment.COMMENT = TextBox3.Text;
+            comment.COMMENTBLOG = id;
+            db.TBLCOMMENT.Add(comment);
+            db.SaveChanges();
+            Response.Redirect("BlogDetails.Aspx?BLOGID=" + id);
+        }
     }
 }

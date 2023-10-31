@@ -58,10 +58,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <span class="menu"></span>
                 <ul>
-                    <li class="active"><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <div class="clearfix"></div>
+                    <li class="active"><a href="Default.Aspx">HOME</a></li>
+                    <li><a href="About.Aspx">ABOUT</a></li>
+                    <li><a href="Contact.Aspx">CONTACT</a></li>
                 </ul>
             </div>
             <div class="clearfix"></div>
