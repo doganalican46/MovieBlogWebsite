@@ -21,9 +21,10 @@
             <ul class="nav navbar-nav">
                 <li><a href="/AdminPages/Blogs.Aspx">Blogs</a></li>
                 <li><a href="/AdminPages/Comments.Aspx">Comments</a></li>
-                <li><a href="/AdminPages/Messages.Aspx">Messages</a></li>
                 <li><a href="/AdminPages/Statistics.Aspx">Statistics</a></li>
                 <li><a href="/AdminPages/About.Aspx">About</a></li>
+                <li><a href="/AdminPages/Logout.aspx">Log Out</a></li>
+
             </ul>
         </div>
     </nav>

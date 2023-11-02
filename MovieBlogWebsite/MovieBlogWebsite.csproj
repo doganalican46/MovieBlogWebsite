@@ -76,10 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdminPages\About.aspx" />
     <Content Include="AdminPages\Blogs.aspx" />
     <Content Include="AdminPages\Comments.aspx" />
     <Content Include="AdminPages\DeleteBlog.aspx" />
     <Content Include="AdminPages\DeleteComment.aspx" />
+    <Content Include="AdminPages\Logout.aspx" />
     <Content Include="AdminPages\NewBlog.aspx" />
     <Content Include="AdminPages\Statistics.aspx" />
     <Content Include="AdminPages\UpdateBlog.aspx" />
@@ -138,6 +140,13 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="AdminPages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\Blogs.aspx.cs">
       <DependentUpon>Blogs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +174,13 @@
     </Compile>
     <Compile Include="AdminPages\DeleteComment.aspx.designer.cs">
       <DependentUpon>DeleteComment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\NewBlog.aspx.cs">
       <DependentUpon>NewBlog.aspx</DependentUpon>

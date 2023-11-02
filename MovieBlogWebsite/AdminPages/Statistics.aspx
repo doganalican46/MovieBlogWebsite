@@ -4,7 +4,7 @@
     <h3>STATISTICS:</h3>
     <br />
     <br />
-    <table class="table table-bordered">
+    <table class="table table-bordered table-hover">
         <tbody>
             <tr>
                 <td>Total Blogs:

@@ -16,6 +16,8 @@
         <asp:TextBox ID="TextBox4" runat="server" placeholder="About Blog" CssClass="form-control" TextMode="MultiLine" Height="300" required=""></asp:TextBox>
         <br />
 
+        <a href="Blogs.Aspx" class="btn btn-danger">Cancel</a>
+
         <asp:Button ID="Button1" runat="server" Text="SAVE" CssClass="btn btn-primary" OnClick="Button1_Click" />
     </form>
 </asp:Content>

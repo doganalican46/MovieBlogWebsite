@@ -12,6 +12,10 @@ namespace MovieBlogWebsite.AdminPages
         BlogMovieEntities db = new BlogMovieEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["USERNAME"] == null)
+            {
+                Response.Redirect("~/LoginPage.Aspx");
+            }
             Label1.Text = db.TBLBLOG.Count().ToString();
             Label2.Text = db.TBLBLOG.Where(x => x.BLOGTYPE == 1).Count().ToString();
             Label3.Text = db.TBLBLOG.Where(x => x.BLOGTYPE == 2).Count().ToString();

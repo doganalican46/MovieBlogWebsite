@@ -38,16 +38,10 @@
                                 <asp:Button ID="Button1" runat="server" Text="Log In" CssClass="form-control btn btn-primary rounded submit px-3" OnClick="Button1_Click" />
                             </div>
                             <div class="form-group d-md-flex">
-                                <div class="w-50">
-                                    <label class="checkbox-wrap checkbox-primary">
-                                        Remember Me
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="w-50 text-md-right">
-                                    <a href="#">Forgot Password</a>
-                                </div>
+                               
+                               
+                                    <a href="Default.Aspx">Go to Website</a>
+                                
                             </div>
                         </form>
                     </div>

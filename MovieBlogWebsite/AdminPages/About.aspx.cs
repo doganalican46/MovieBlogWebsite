@@ -7,26 +7,23 @@ using System.Web.UI.WebControls;
 using MovieBlogWebsite.Entity;
 namespace MovieBlogWebsite.AdminPages
 {
-    public partial class Comments : System.Web.UI.Page
+    public partial class About : System.Web.UI.Page
     {
         BlogMovieEntities db = new BlogMovieEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["USERNAME"] == null)
             {
                 Response.Redirect("~/LoginPage.Aspx");
             }
-            var comments = (from x in db.TBLCOMMENT
-                            select new
-                            {
-                                x.COMMENTID,
-                                x.USERNAME,
-                                x.COMMENT,
-                                x.TBLBLOG.BLOGTITTLE
-                            }).ToList();
+            
 
-            Repeater1.DataSource = comments;
-            Repeater1.DataBind();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="UpdateBlog.aspx.cs" Inherits="MovieBlogWebsite.AdminPages.UpdateBlog" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <form runat="server">
@@ -14,8 +15,8 @@
         <br />
         <asp:TextBox ID="TextBox4" runat="server" placeholder="About Blog" CssClass="form-control" TextMode="MultiLine" Height="300" required=""></asp:TextBox>
         <br />
-
-        <asp:Button ID="Button1" runat="server" Text="UPDATE" CssClass="btn btn-primary" OnClick="Button1_Click"  />
+        <a href="Blogs.Aspx" class="btn btn-danger">Cancel</a>
+        <asp:Button ID="Button1" runat="server" Text="UPDATE" CssClass="btn btn-primary" OnClick="Button1_Click" />
     </form>
 
 </asp:Content>

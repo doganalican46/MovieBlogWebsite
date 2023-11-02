@@ -9,9 +9,14 @@ namespace MovieBlogWebsite.AdminPages
 {
     public partial class UpdateComment : System.Web.UI.Page
     {
+
         BlogMovieEntities db = new BlogMovieEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["USERNAME"] == null)
+            {
+                Response.Redirect("~/LoginPage.Aspx");
+            }
             int y = int.Parse(Request.QueryString["COMMENTID"]);
             if (Page.IsPostBack == false)
             {

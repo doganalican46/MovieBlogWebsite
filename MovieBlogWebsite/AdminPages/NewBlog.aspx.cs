@@ -12,6 +12,10 @@ namespace MovieBlogWebsite.AdminPages
         BlogMovieEntities db = new BlogMovieEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["USERNAME"] == null)
+            {
+                Response.Redirect("~/LoginPage.Aspx");
+            }
             if (Page.IsPostBack == false)
             {
                 var types = (from x in db.TBLTYPE

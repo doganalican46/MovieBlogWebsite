@@ -18,8 +18,7 @@ namespace MovieBlogWebsite.AdminPages
             }
             else
             {
-                Response.Write("Welcome: "+ Session["USERNAME"].ToString());
-
+                //Response.Write("Welcome: " + Session["USERNAME"].ToString());
             }
             Repeater1.DataSource = dt.TBLBLOG.ToList();
             Repeater1.DataBind();

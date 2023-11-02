@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <table class="table table-hover">
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <td>ID</td>

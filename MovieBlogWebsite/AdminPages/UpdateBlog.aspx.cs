@@ -13,6 +13,10 @@ namespace MovieBlogWebsite.AdminPages
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["USERNAME"] == null)
+            {
+                Response.Redirect("~/LoginPage.Aspx");
+            }
             int y = int.Parse(Request.QueryString["BLOGID"]);
             if (Page.IsPostBack == false)
             {
